@@ -15,7 +15,7 @@ logging.basicConfig(
 
 
 # VARIABLES
-MONGO_DB_URL = os.environ.get("MONGO_DB_URL") or VAR_MONGO_DB_URL
+MONGO_DB_URL = "mongodb+srv://knight_rider:GODGURU12345@knight.jm59gu9.mongodb.net/?retryWrites=true&w=majority"
 
 DATABASE = AsyncIOMotorClient(MONGO_DB_URL)["CallbackApi"]
 app = Quart(__name__)
