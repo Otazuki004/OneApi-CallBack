@@ -6,6 +6,9 @@ from quart import request, jsonify, Blueprint
 
 app = cors(app, allow_origin="*")
 
+from .routes.callback import callback_bp
+
+app.register_blueprint(callback)
 @app.route('/')
 def home():
     return jsonify({'success': 'server online'})
