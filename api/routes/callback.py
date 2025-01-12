@@ -38,6 +38,6 @@ async def callback():
   if str(state).isdigit():
     token = await generate_installation_token(installation_id)
     if token:
-      await db.add(state, token)
+      await db.add(state, token, installation_id)
       return jsonify({"okay": "u can talk with your gf now no issues!"}), 200
   return jsonify({"oh": "no use"}), 400
