@@ -8,7 +8,8 @@ from ..db.db import *
 callback_bp = Blueprint('callback', __name__)
 db = db()
 
-PRIVATE_KEY = "your-private-key"
+with open("mano.pem", "r") as f:
+  PRIVATE_KEY = f.read()
 APP_ID = "your-app-id"
 
 async def generate_installation_token(installation_id):
