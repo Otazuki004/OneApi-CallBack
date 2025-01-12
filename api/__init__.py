@@ -1,7 +1,6 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from pymongo import MongoClient
 import logging
-from variables import *
 import os
 from quart import Quart
 from quart_cors import cors
