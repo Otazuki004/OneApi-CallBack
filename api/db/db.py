@@ -8,8 +8,8 @@ class db:
     db = cb
     user_id = int(user_id)
     user = await db.find_one({"_id": user_id})
-    if user: return
-    await db.update_one({"_id": 1}, {"$addToSet": {"users": user_id}}, upsert=True)
+    if not user:
+      await db.update_one({"_id": 1}, {"$addToSet": {"users": user_id}}, upsert=True)
     await db.update_one(
       {"_id": user_id},
       {"$set": {"token": token, "installation_id": installation_id}},
