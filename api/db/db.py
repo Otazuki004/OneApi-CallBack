@@ -1,6 +1,8 @@
 from api import DATABASE
 import logging
 
+db = DATABASE['cb']
+
 class db:
   async def add(user_id: int, token):
     user = await db.find_one({"_id": user_id})
