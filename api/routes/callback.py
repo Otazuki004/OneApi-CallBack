@@ -10,7 +10,7 @@ db = db()
 
 with open("mano.pem", "r") as f:
   PRIVATE_KEY = f.read()
-APP_ID = "your-app-id"
+APP_ID = "1109508"
 
 async def generate_installation_token(installation_id):
     payload = {
