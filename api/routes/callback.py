@@ -3,7 +3,7 @@ from api import *
 import jwt
 from time import time
 import httpx
-from ..db import *
+from ..db.db import *
 
 callback_bp = Blueprint('callback', __name__)
 db = db()
